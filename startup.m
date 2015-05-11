@@ -21,8 +21,12 @@ if exist('external/caffe/matlab/caffe')
 else
   warning('Please install Caffe in ./external/caffe');
 end
+
 addpath('experiments');
 addpath('imdb');
 addpath('vis/pool5-explorer');
+addpath('human_detection');
 addpath('examples');
 fprintf('R-CNN startup done\n');
+setenv('KMP_DUPLICATE_LIB_OK','TRUE');
+dataset_choice = 'ILSVRC13';
